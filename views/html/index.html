@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Religious Trust</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .page {
+        display: none;
+        padding: 20px;
+      }
+
+      .page.active {
+        display: block;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .gallery img {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      .contact-form label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="navigate('home')">Home</a></li>
+          <li><a href="#" onclick="navigate('gallery')">Gallery</a></li>
+          <li><a href="#" onclick="navigate('about')">About</a></li>
+          <li><a href="#" onclick="navigate('contact')">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="content">
+      <section id="home" class="page">
+        <h1>Welcome to Our Religious Trust</h1>
+        <p>
+          Our trust is dedicated to spiritual growth and community service. We
+          believe in the power of faith and community to transform lives and
+          bring about positive change in the world.
+        </p>
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to provide a place of worship and community for all
+          individuals seeking spiritual growth and support. We offer a variety
+          of programs and services to help individuals and families strengthen
+          their faith and connect with others.
+        </p>
+        <h2>Upcoming Events</h2>
+        <p>Join us for our upcoming events:</p>
+        <ul>
+          <li>Weekly Prayer Meeting - Every Sunday at 10 AM</li>
+          <li>Community Service Day - First Saturday of every month</li>
+          <li>Annual Spiritual Retreat - Date to be announced</li>
+        </ul>
+      </section>
+      <section id="gallery" class="page gallery">
+        <h1>Gallery</h1>
+        <p>Here are some photos from our events and activities.</p>
+        <!-- <img src="https://via.placeholder.com/100" alt="Gallery Image 1">
+            <img src="https://via.placeholder.com/100" alt="Gallery Image 2">
+            <img src="https://via.placeholder.com/100" alt="Gallery Image 3">
+            <img src="https://via.placeholder.com/100" alt="Gallery Image 4">
+            <img src="https://via.placeholder.com/100" alt="Gallery Image 5">
+            <img src="https://via.placeholder.com/100" alt="Gallery Image 6"> -->
+      </section>
+      <section id="about" class="page">
+        <h1>About Us</h1>
+        <p>
+          Learn more about our mission and values. Our trust was founded with
+          the goal of providing a spiritual home for our community. We are
+          committed to helping individuals grow in their faith and make a
+          positive impact on the world.
+        </p>
+        <h2>Our History</h2>
+        <p>
+          Founded in 1990, our trust has grown from a small group of dedicated
+          individuals to a vibrant community of faith. We have built a strong
+          foundation of trust and support, and we continue to expand our reach
+          through various programs and services.
+        </p>
+        <h2>Our Values</h2>
+        <ul>
+          <li>Faith - We believe in the power of faith to transform lives.</li>
+          <li>
+            Community - We are committed to building a strong and supportive
+            community.
+          </li>
+          <li>
+            Service - We believe in serving others and making a positive impact
+            on the world.
+          </li>
+        </ul>
+      </section>
+      <section id="contact" class="page">
+        <h1>Contact Us</h1>
+        <p>
+          Get in touch with us for more information. We would love to hear from
+          you!
+        </p>
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+        <p>Alternatively, you can reach us at:</p>
+        <p>Email: info@religioustrust.org</p>
+        <p>Phone: +91 123 456 7890</p>
+        <p>Address: 123 Faith Street, Spiritual City, India</p>
+      </section>
+    </main>
+    <script>
+      function navigate(page) {
+        const pages = document.querySelectorAll(".page");
+        pages.forEach((p) => p.classList.remove("active"));
+        document.getElementById(page).classList.add("active");
+      }
+
+      // Set the home page as the default active page
+      document.addEventListener("DOMContentLoaded", () => {
+        navigate("home");
+      });
+    </script>
+  </body>
+</html>
