@@ -5,7 +5,9 @@ const cors = require("cors");
 const helmet = require("helmet");
 // app.use(cors());
 app.use(helmet());
-
+app.use("/", (req, res) => {
+  res.json({ msg: "Hello there !!" });
+});
 app.use((req, res, next) => {
   console.log("URL :", req.url);
   res.setHeader(
